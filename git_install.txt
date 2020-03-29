@@ -1,0 +1,22 @@
+##########################################
+###                                    ###
+###     Instalacio git por terminal    ###
+###                                    ### 
+##########################################
+#usuario root
+
+apt install git
+
+git config --global user.name "NOMBRE USUARIO"
+git config --global user.email "CORREO DE USUARIO"
+
+#configuracion de editor
+
+git config --global core.editor vim
+gif config --global merge.tool vimdiff
+
+#muestra detalle de la configuracion
+
+git config --list
+
+

@@ -1,0 +1,28 @@
+##########################################
+###                                    ###
+###      INSTALAR ADAPTADOR WIFI       ###
+###               DEBIAN 9             ###
+###                                    ###
+##########################################
+
+
+ Lspci -v, 
+el resultado --- 03:00.0 Network controller: Broadcom Limited BCM43142 802.11b/g/n (rev 01) --- de esta manera saben cuan es el controlador. 
+ 
+vim /etc/apt/ sources-list
+
+#Pegar la line en el archivo
+#wifi
+
+deb http://httpredir.debian.org/debian/jessie main contrib non free
+
+apt-get update
+
+apt-get install linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,') broadcom-sta-dkms
+(desconozco el motivo peros aca deben incertar el CD/USB de arranque)
+
+modprobe -r b44 b43 b43legacy ssb brcmsmac
+
+modprobe wl
+
+
