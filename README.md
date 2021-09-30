@@ -1,2 +1,1 @@
-# instalaciones-debian9-
-Instalaciones y sources.list
+Instalaciones y utilidades del sistema 
