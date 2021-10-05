@@ -1,0 +1,58 @@
+Mover el cursor (navegacion)
+	h - Mueve a la izquierda 
+	j - Mueve para abajo(linea siguiente)
+	k - Mueve para arriba (linea superior)
+	l . Mueve a la derecha 	
+	w - Mueve de palabra en palabra (toma la palabra como objeto)
+	e - Mueve de palabra en palabra para adelante (dereche)
+	b - Mueve de palabra en palabra para atras (izquierda)
+
+Insertar texto
+	i - Inserta texto (antes del cursor)
+	a - Donde esta el cursor 	
+	A - Va al final de la linea para ingresar texto
+
+Eliminar texto
+	x - Elimina caracter por caracter, siempre en modo normal(presionar ESC x2 antes)
+
+Guardar (***ANTES Precionar ESC 2 veces***)
+	:w - Para guardar con exito 
+	:wq - Guardar y salir del archivo 
+
+Eliminar
+	Texto (modo normal **ESC x2**)
+		dw - Elimina texto carater por caracter
+		u - Trae la palabra borrada
+		ctrl+r - Rehace lo borrado
+		d$ - Elimina el contenido de la linea (NO LA LINEA)
+		db - Borra hacia adelante
+		ciw - Para cambiar una palabra 
+	Lineas (MOdo normal **ESC x2**)
+		d - Precionar 2 veces 
+		p - Para pegar o duplicra una linea
+	 
+Saltos de lineas
+	gg - Para ir al inicio
+	shif+g - Para ir al final
+	N°de linea+shifg - Para ir a una linea especifica	
+	/ + (lo que se busca) - Para buscar una palabra espesifica, SIEMPRE BUSCA DESDE DONDE ESTA EL CURSOR PARA ADELANTE
+	? + (lo que se busque) - Para buscar palabra desde donde este el cursor para atras 	
+	% - Para ir de '()' / '{}' / '[]', se va a mover desde su apertura y su cierre de los mismos (CUALQIER OBJETO)
+	0 - Comienzo de linea
+	$ - Al final de la linea
+	o - Para nueva linea 
+	shift+o - para insertar una nueva linea (arriba) e insertar
+	shift+R - reamplaza carater por cararcter pero de forma continua y automatica
+
+Copiar y pegar
+	v - Pasa a la parte visual y pinta hasa donde quiere seleccionar 
+	y - Copia
+	p - Pegar 
+	
+Configuraciones
+	
+ 
+	 
+	
+	
+ 
