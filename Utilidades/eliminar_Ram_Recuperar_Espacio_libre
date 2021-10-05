@@ -1,0 +1,19 @@
+ls /va/cache/apt/archives
+	Muestra detalle conque estam en memoria
+
+sudo du -h /var/cache/apt/archives
+	>pass
+	Muestra en tamaño de el espacio de la cache y archivos no utiles 
+
+sudo apt-get clean
+	Elimina todo 
+sudo apt-get autoclean
+	Elimina archivos que no esta disponible 
+sudo apt-get auto-remove
+	Elmina paquetes que ya estab obsoletos
+sudo apt-get purge
+	Elimina paquete por paquete
+
+
+
+
