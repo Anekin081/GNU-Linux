@@ -1,0 +1,38 @@
+Instalacion
+
+	OPCION 1 (desde paquete)
+
+		https://www.opera.com/es/download (la version .deb)
+		sudo dpkag -i Descarga/opera-stable_79...(LA VERSION QUE SE AYA BAJADO).....amd.deb
+			<SI> //El path  esta en etc/apt/sources.list.d
+	OPCION 2 (desde terminal)
+			
+		wget -qO- https://deb.opera.com/archive.key | sudo apt-key add -  // Solo agrgara el llavero d opera y el resultado es OK 
+		sudo add-apt-repository "deb [arch=i386,amd64] https://deb.opera.com/opera-stable/stable non-free" // Agrega el repositorio
+		sudo apt install opera-stable
+			
+		
+
+	Desistalacion
+
+		sudo apt-get—purge remove Opera
+		sudo add-apt-repository -r "deb [arch=i386,amd64] https://deb.opera.com/opera-stable/stable non-free"
+		Para eliminar la key 
+			1- sudo apt-key list 
+			2- sudo apt-key del XXXX XXXX // Copiar los ultimos 8 caracteres (alfanumericos) de la key
+		sudo apt autoremove
+		sudo apt autoclean
+		sudo apt update  
+	
+
+#Problemas con multimedia
+
+	sudo apt search chromium-codecs-ffmpeg
+	// PASS
+	sudo apt install chromium-codes-ffmpeg-extra  // hay queinstalar el codec que esta mas completo // 
+
+#Solucion public Key
+
+	wget https://deb.opera.com/archive.key
+	sudo apt-key add archive.key
+	sudo apt-get update 
