@@ -1,0 +1,21 @@
+*** Instalacion Ubuntu 20.04 *** 
+
+https://code.visualstudio.com/
+	// Bajar el archivo .deb 
+
+Instalacion:
+	OP 1)
+		cd Downloads
+		sudo apt install ./code***VERSION***.deb
+	
+	op 2)
+		sudo apt update && sudo apt upgrade	
+		sudo apt install software-properties-common apt-transport-https wget
+		wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+		sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+		sudo apt install code
+		sudo apt update && sudo apt upgrade
+
+Desistalar 
+	sudo snap remove code
+	sudo apt remove code

@@ -1,0 +1,48 @@
+*** Instalar Adaptador WIFI Debian9 "strech"
+
+Solucion :
+
+	#Buscar la tarjeta de red
+	1 -  Lspci -v
+  	#Buscar la siguiente linea (en este caso) =>   03:00.0 Network controller: Broadcom Limited BCM43142 802.11b/g/n (rev 01)   
+ 
+	2 - vim /etc/apt/ sources-list
+
+	#Pegar la line en el archivo
+    		#wifi
+  		deb http://httpredir.debian.org/debian/jessie main contrib non free
+
+	apt-get update
+	apt-get install linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,') broadcom-sta-dkms
+     	modprobe -r b44 b43 b43legacy ssb brcmsmac
+	modprobe wl
+
+
+*** Ubuntu ***
+
+Solucion 1 : 
+	
+	sudo apt-get purge bcmwl*
+		reboot 
+
+Solucion 2 :
+	
+	lspci | grep Wireless
+		#Resultado [... 02:00.0 Network controller: Broadcom Corporation BCM4313 802.11b/g/n Wireless LAN Controller (rev 01) ...]
+	sudo apt-get purge b43-fwcutter firmware-b43-installer firmware-b43-lpphy-installer firmware-b43legacy-installer bcmwl*
+	sudo apt-get install b43-fwcutter firmware-b43-installer bcmwl*
+	reboot
+
+	#Para otros modelos de tarjetas de red (BCM4301 / BCM4303 / BCM4306/2 / BCM4306) :
+		sudo apt-get purge b43-fwcutter firmware-b43-installer firmware-b43-lpphy-installer firmware-b43legacy-installer bcmwl*
+		sudo apt-get install b43-fwcutter firmware-b43legacy-installer bcmwl*
+		reboot
+
+Solucion 3 :
+	
+	sudo software-properties-gtk&exit
+	#exit (cerrar terminal)
+	sudo apt-get update
+	sudo apt-get install linux-sources linux-headers-3.5.0-17-generic
+	sudo apt-get install bcmwl-kernel-source
+
