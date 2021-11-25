@@ -1,0 +1,44 @@
+Instalacion Telegram (Ubuntu20.04)
+
+	Instalacion 
+		
+		OP1 por archivo binario :	
+			Descargar :  .tar : https://desktop.telegram.org/
+			cd ~/Descargas
+			tar -xvf tsetup.2.7.1.tar
+			sudo mv Telegram/ /opt/telegram
+			sudo ln -sf /opt/telegram/Telegram /usr/bin/telegram
+				Desinstalar:
+					cd /opt/ # ~/.TelegramDesktop
+					rm .TelegramDesktop
+					Si no se encuentra el archivo Sudo updatedb && locate Telegram # acceder y borarr
+		
+		OP2 por APT :
+			sudo apt install telegram-desktop
+				Para ejecutar:
+					Tecla inicio 'Telegram'
+				                Desinstalar:
+				                        sudo apt remove Telegram
+	
+
+		OP3 por Snap:
+			sudo snap install telegram-desktop
+				Para ejecutar:
+					/snap/bin/telegram-desktop
+				Desinstalar:
+					Sudo snap remove telegram-sergiusens
+
+
+		OP4 por Flatpak
+			flatpak install flathub org.telegram.desktop
+				Para ejecutar:
+					flatpak run org.telegram.desktop
+
+		OP5 por PPA 
+			sudo add-apt-repository ppa:atareao/Telegram
+			sudo apt update
+			sudo apt install Telegram
+				Desinstalar:
+					Sudo apt remove telegram
+					Sudo add-apt-repository -r ppa:atareao/telegram
+
