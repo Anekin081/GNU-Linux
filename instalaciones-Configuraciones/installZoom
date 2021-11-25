@@ -1,0 +1,11 @@
+Instalacion Zomm
+
+	Bajar el paquete (para la ultima version) : https://zoom.us/download#client_4meeting
+
+	cd /Descargas/
+	sudo apt install ./  *** nombre del archivo o  TAB ***
+	sudo pat update
+
+		Desinstalar:
+			sudo apt remove zoom
+
