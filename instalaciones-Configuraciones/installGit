@@ -1,0 +1,30 @@
+Instalacion Git (Ubuntu 20.04)
+
+	Instalacion
+		apt-get install git
+
+
+
+
+
+Configuracion 
+
+	$ git config --global user.name " *** NOMBRE DE USUARIO *** "
+	$ git config --global user.email *** EMAIL ***
+	git config --global core.editor "vim" // configuracion del editor Vim
+
+Proyectos
+	git init
+	
+
+
+	git status
+	git dif (para ver que y cuales fueron los cambios)
+	git commit -m ' *** Comnterio breve de las combios *** '
+
+	Eliminar archivos 
+		rm *** Carpeta ***
+		git status 
+		git rm *** Caepeta ***
+		git status
+
